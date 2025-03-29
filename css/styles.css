@@ -1,0 +1,179 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f5f5eb;
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Diagonal sections */
+.diagonal-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background-color: #11d4ee;
+    clip-path: polygon(0 0, 0% 100%, 100% 0);
+    z-index: -1;
+}
+
+.diagonal-bottom {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background-color: #025a66;
+    clip-path: polygon(100% 100%, 0% 100%, 100% 0);
+    z-index: -1;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.thank-you-container {
+    background-color: white;
+    border-radius: 12px;
+    padding: 3rem;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 2rem;
+}
+
+.success-icon {
+    width: 60px;
+    height: 60px;
+    background-color: #025a66;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 1.5rem;
+    color: white;
+    font-size: 2rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #222;
+}
+
+p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+    font-weight: 400;
+    margin-bottom: 2rem;
+}
+
+.cards-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 600px;
+    gap: 1.5rem;
+}
+
+.card {
+    flex: 1;
+    background-color: white;
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+    color: #222;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.social-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: white;
+    font-size: 1.2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.facebook {
+    background-color: #1877f2;
+}
+
+.linkedin {
+    background-color: #0077b5;
+}
+
+.youtube {
+    background-color: #e60023;
+}
+
+.github {
+    background-color: #202020;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #025a66;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 1rem;
+}
+
+.btn:hover {
+    background-color: #00a67c;
+    transform: translateY(-3px);
+}
+
+@media (max-width: 768px) {
+    .cards-container {
+        flex-direction: column;
+    }
+
+    .thank-you-container, .card {
+        padding: 2rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+}
